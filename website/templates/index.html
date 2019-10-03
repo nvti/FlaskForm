@@ -1,0 +1,38 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block styles %}
+{{ super() }}
+<!-- super() is Jinja2 command to add this without deleting what is
+		 already in base.html in the styles block - very important! -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+
+
+<!-- inserts title into bootstrap/base.html -->
+{% block title %}
+Punctuation restoration
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-8">
+
+            <h1>Demo punctuation restoration</h1>
+
+            <p class="lead">This is a ...</p>
+
+            <!-- form will appear below -->
+
+            {{ wtf.quick_form(form) }}
+
+            <p class="space-above"><strong>{{ message }}</strong></p>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
