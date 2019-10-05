@@ -18,7 +18,7 @@ def punctuation_restoration():
 
     try:
         output_text = punctuation.restore(request.json['clear_text'])
-    except expression as identifier:
+    except:
         output_text = 'Can not restore punctuation. Model error!. Please check'
 
     return jsonify({'output_text': output_text}), 200

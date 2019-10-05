@@ -18,7 +18,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 
 # Config
 
-xlnet_pretrain_path='../xlnet_out_model'
+xlnet_pretrain_path='../../xlnet_out_model'
 
 max_len  = 64
 
