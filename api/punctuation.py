@@ -67,7 +67,7 @@ class PunctuationRestore():
 
     def __init__(self,model_path=xlnet_pretrain_path):
         # Load self.tokenizer
-        vocabulary = os.path.join(xlnet_pretrain_path, 'xlnet-base-cased-spiece.model')
+        vocabulary = os.path.join(xlnet_pretrain_path, 'spiece.model')
 
         self.tokenizer = XLNetTokenizer(vocab_file=vocabulary,do_lower_case=True)
 
